@@ -3,9 +3,13 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Avatar = () => {
+interface AvatarProps {
+    src: string | null | undefined
+}
+
+const Avatar: React.FC<AvatarProps> = ({ src }) => {
     return (
-        <Image alt='Avatar' src='/images/placeholder.jpg' width={30} height={30} className='rounded-full' />
+        <Image alt='Avatar' src={src || '/images/placeholder.jpg'} width={30} height={30} className='rounded-full' />
     )
 }
 
