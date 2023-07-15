@@ -35,7 +35,7 @@ const Home = async (
         gap-8
         "
       >
-        {listings.map((listing: SafeListing) => (
+        {listings.map((listing: any) => (
           <ListingCard
             key={listing.id}
             currentUser={currentUser}
