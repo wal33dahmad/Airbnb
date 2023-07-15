@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import getCurrentUser from "./actions/getCurrentUser";
 import getListings, { IListingParams } from "./actions/getListings";
 import Container from "./components/Container";
@@ -35,7 +37,7 @@ const Home = async (
         gap-8
         "
       >
-        {listings.map((listing: any) => (
+        {listings.map((listing: SafeListing) => (
           <ListingCard
             key={listing.id}
             currentUser={currentUser}
